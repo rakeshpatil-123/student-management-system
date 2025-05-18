@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Technology Department</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gradient Heading Animation */
+        @keyframes gradientText {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .gradient-heading {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #00c6ff, #0072ff, #66bfff, #b3e5ff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientText 5s ease infinite;
+            text-align: center;
+        }
+
+        /* Card Hover Effects */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* HOD Image */
+        .hod-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #0072ff;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-center py-10">
+        <h1 class="gradient-heading">Information Technology Department</h1>
+        <p class="mt-4 text-xl">Where technology meets innovation and creativity.</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="container mx-auto py-10 px-4 text-center">
+        <h2 class="text-2xl font-bold mb-6">About the Department</h2>
+        <p class="text-lg leading-7 text-gray-700">
+            The Information Technology Department at BIST is dedicated to equipping students with the skills and knowledge needed to thrive in the rapidly evolving world of IT. The department focuses on innovation, problem-solving, and real-world applications, ensuring that graduates are industry-ready.
+        </p>
+        <p class="text-lg leading-7 text-gray-700 mt-4">
+            Our esteemed Head of Department (HOD), Prof. Dr. Rashmi Singh , leads the department with his expertise in IT solutions, cybersecurity, and software development. With over 15 years of experience, Dr. Rashmi Singh fosters an environment of growth and collaboration.
+        </p>
+        <div class="mt-10">
+            <img src="../images/rashmi.jpeg" alt="HOD IT" class="hod-image mx-auto">
+            <h3 class="text-xl font-semibold mt-4">Dr. Rashmi Singh</h3>
+            <p class="text-gray-600">Head of Information Technology Department</p>
+        </div>
+    </section>
+
+    <!-- Subjects Cards -->
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Core Subjects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card: Web Development -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/tech.png" alt="Web Development" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Web Development</h3>
+                    <p>Build dynamic websites and applications with HTML, CSS, JavaScript, and modern frameworks.</p>
+                </div>
+            </div>
+
+            <!-- Card: Database Systems -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/mechanical.jpeg" alt="Database Systems" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Database Systems</h3>
+                    <p>Master the design and management of databases using SQL and advanced database tools.</p>
+                </div>
+            </div>
+
+            <!-- Card: Software Engineering -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/place.png" alt="Software Engineering" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Software Engineering</h3>
+                    <p>Learn software development processes, project management, and best practices in coding.</p>
+                </div>
+            </div>
+
+            <!-- Card: Cloud Computing -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/tech.png" alt="Cloud Computing" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Cloud Computing</h3>
+                    <p>Understand cloud infrastructure and learn how to deploy scalable applications.</p>
+                </div>
+            </div>
+
+            <!-- Card: Cybersecurity -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/electrical.jpeg" alt="Cybersecurity" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
+                    <p>Explore advanced security techniques to protect systems from cyber threats.</p>
+                </div>
+            </div>
+
+            <!-- Card: Data Analytics -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/electronix.jpeg" alt="Data Analytics" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
+                    <p>Learn to process and analyze data to extract meaningful insights for decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Admissions</a></li>
+                        <li><a href="#" class="footer-link">Departments</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

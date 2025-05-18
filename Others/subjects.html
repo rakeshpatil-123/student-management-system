@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects Overview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gradient Animation */
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .gradient-heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #ff758c, #ff7eb3, #ff98ba, #ffa4c1);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 4s ease infinite;
+            text-align: center;
+        }
+
+        /* Card Animation */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Card Gradient Overlay */
+        .card-overlay {
+            background: linear-gradient(to bottom right, rgba(255, 117, 140, 0.6), rgba(255, 126, 179, 0.6));
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        /* Description Animation */
+        .card-desc {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .card:hover .card-desc {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-pink-500 to-purple-500 text-white text-center py-10">
+        <h1 class="gradient-heading">Explore Our Core Subjects</h1>
+        <p class="mt-4 text-xl">Discover the foundational courses that define your journey of learning.</p>
+    </header>
+
+    <!-- Cards Section -->
+    <section class="container mx-auto py-10 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden relative">
+                <img src="../images/tech.png" alt="Data Structures" class="w-full h-40 object-cover">
+                <div class="card-overlay"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Data Structures</h3>
+                    <p class="card-desc text-gray-700">Master efficient ways to store and manipulate data for algorithms.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden relative">
+                <img src="../images/mechanical.jpeg" alt="Artificial Intelligence" class="w-full h-40 object-cover">
+                <div class="card-overlay"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Artificial Intelligence</h3>
+                    <p class="card-desc text-gray-700">Explore neural networks, machine learning, and AI technologies.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden relative">
+                <img src="../images/stu.jpeg" alt="Software Engineering" class="w-full h-40 object-cover">
+                <div class="card-overlay"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Software Engineering</h3>
+                    <p class="card-desc text-gray-700">Learn the principles of software development and project management.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden relative">
+                <img src="../images/electronix.jpeg" alt="Cloud Computing" class="w-full h-40 object-cover">
+                <div class="card-overlay"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Cloud Computing</h3>
+                    <p class="card-desc text-gray-700">Understand cloud infrastructure and build scalable applications.</p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden relative">
+                <img src="../images/tech.png" alt="Cybersecurity" class="w-full h-40 object-cover">
+                <div class="card-overlay"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
+                    <p class="card-desc text-gray-700">Secure systems and networks against cyber threats and vulnerabilities.</p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden relative">
+                <img src="../images/electrical.jpeg" alt="Database Management" class="w-full h-40 object-cover">
+                <div class="card-overlay"></div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Database Management</h3>
+                    <p class="card-desc text-gray-700">Learn database design, relational databases, and SQL programming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Admissions</a></li>
+                        <li><a href="#" class="footer-link">Departments</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

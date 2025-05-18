@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    flex-shrink: 0;
+    width: 80%; /* Image takes 80% of the screen width */
+    height: 100%; /* Maintain container height */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dots .dot {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dots .dot.active {
+    background-color: white;
+}  /* Infinite Scrolling Animation */
+@keyframes infiniteScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Image Hover Effect */
+.scrolling-image:hover {
+    transform: scale(0.9); /* Shrinks image on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Container Styling */
+.image-container {
+    display: flex;
+    animation: infiniteScroll 30s linear infinite; /* Infinite animation */
+    gap: 20px; /* Space between images */
+}
+
+/* Image Styling */
+.image-container img {
+    width: 150px; /* Adjust image width */
+    height: 150px; /* Adjust image height */
+    object-fit: cover;
+    margin-right: 20px; /* Space between images */
+}
+
+/* Container for smooth overflow */
+.scroll-wrapper {
+    overflow: hidden; /* Hide overflowing content */
+    width: 100%;
+}
+
+  /* Custom hover effect for the cards */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Smooth image transition */
+.card img {
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Animation for the heading */
+@keyframes headingAnimation {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.heading {
+    animation: headingAnimation 1s ease-out forwards;
+}
+
+  /* Hover effect for scaling links */
+  .footer-link:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Social Media Icon Hover */
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #1DA1F2; /* Example: Twitter Blue */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: #1f2937; /* Tailwind Zinc-900 */
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu Styling */
+.navbar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu .dropdown {
+    position: relative;
+}
+
+.navbar-menu .nav-link {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    transition: color 0.3s;
+}
+
+.navbar-menu .nav-link:hover {
+    color: #00bcd4;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #374151; /* Tailwind Zinc-800 */
+    padding: 10px 0;
+    margin: 0;
+    display: none;
+    min-width: 200px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 16px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Buttons */
+.button-container button {
+    background-color: #2563eb; /* Tailwind Blue-500 */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #1e40af; /* Tailwind Blue-600 */
+    transform: scale(1.05);
+}

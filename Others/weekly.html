@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Diary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gradient Heading Animation */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #42a5f5, #478ed1, #478ed1, #42a5f5);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 4s ease infinite;
+            text-align: center;
+        }
+
+        /* Hover Effects for Weekly Cards */
+        .weekly-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .weekly-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Task Highlighting */
+        .task {
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .task:hover {
+            background: #42a5f5;
+            transform: scale(1.05);
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-center py-10">
+        <h1 class="gradient-heading">Weekly Diary for Teachers & Faculty</h1>
+        <p class="mt-4 text-xl">Organize your weekly tasks, classes, and meetings efficiently.</p>
+    </header>
+
+    <!-- Weekly Planner Section -->
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Plan Your Week</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Monday -->
+            <div class="weekly-card bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-4">Monday</h3>
+                <ul class="space-y-2">
+                    <li class="task bg-gray-200 rounded-md p-3">10:00 AM - Faculty Meeting</li>
+                    <li class="task bg-gray-200 rounded-md p-3">12:00 PM - Class: Data Structures</li>
+                    <li class="task bg-gray-200 rounded-md p-3">2:30 PM - Research Group Discussion</li>
+                </ul>
+            </div>
+
+            <!-- Tuesday -->
+            <div class="weekly-card bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-4">Tuesday</h3>
+                <ul class="space-y-2">
+                    <li class="task bg-gray-200 rounded-md p-3">9:00 AM - Administrative Tasks</li>
+                    <li class="task bg-gray-200 rounded-md p-3">11:00 AM - Class: Software Engineering</li>
+                    <li class="task bg-gray-200 rounded-md p-3">3:00 PM - Lab Session: Database Management</li>
+                </ul>
+            </div>
+
+            <!-- Wednesday -->
+            <div class="weekly-card bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-4">Wednesday</h3>
+                <ul class="space-y-2">
+                    <li class="task bg-gray-200 rounded-md p-3">10:00 AM - Seminar Preparation</li>
+                    <li class="task bg-gray-200 rounded-md p-3">1:00 PM - Faculty Workshop</li>
+                    <li class="task bg-gray-200 rounded-md p-3">4:00 PM - Class: Artificial Intelligence</li>
+                </ul>
+            </div>
+
+            <!-- Thursday -->
+            <div class="weekly-card bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-4">Thursday</h3>
+                <ul class="space-y-2">
+                    <li class="task bg-gray-200 rounded-md p-3">9:30 AM - Curriculum Review</li>
+                    <li class="task bg-gray-200 rounded-md p-3">11:30 AM - Class: Operating Systems</li>
+                    <li class="task bg-gray-200 rounded-md p-3">3:30 PM - Project Evaluations</li>
+                </ul>
+            </div>
+
+            <!-- Friday -->
+            <div class="weekly-card bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-4">Friday</h3>
+                <ul class="space-y-2">
+                    <li class="task bg-gray-200 rounded-md p-3">9:00 AM - Research Paper Submission</li>
+                    <li class="task bg-gray-200 rounded-md p-3">12:00 PM - Team Collaboration Meeting</li>
+                    <li class="task bg-gray-200 rounded-md p-3">2:00 PM - Lab Maintenance</li>
+                </ul>
+            </div>
+
+            <!-- Saturday -->
+            <div class="weekly-card bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-bold mb-4">Saturday</h3>
+                <ul class="space-y-2">
+                    <li class="task bg-gray-200 rounded-md p-3">10:00 AM - Department Review</li>
+                    <li class="task bg-gray-200 rounded-md p-3">1:00 PM - Student Feedback Session</li>
+                    <li class="task bg-gray-200 rounded-md p-3">3:30 PM - Faculty Collaboration Project</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Departments</a></li>
+                        <li><a href="#" class="footer-link">Faculty Portal</a></li>
+                        <li><a href="#" class="footer-link">Student Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

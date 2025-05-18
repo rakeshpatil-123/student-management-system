@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Dashboard.css" />
+    <style>
+      /* Custom Animation for Scaling and Color Change */
+      @keyframes scaleAndColor {
+        0% {
+          transform: scale(1);
+          background-position: 0% 50%;
+        }
+        50% {
+          transform: scale(1.2);
+          background-position: 100% 50%;
+        }
+        100% {
+          transform: scale(1);
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Gradient Animation */
+      .animated-gradient {
+        animation: scaleAndColor 3s ease-in-out infinite;
+        background-size: 200% 200%;
+      }
+
+      /* Class for Animated Gradient */
+      .sliding-gradient {
+        animation: slideAndFade 5s ease-in-out infinite;
+        background-size: 300% 300%;
+      }
+      .hover-text:hover {
+        animation: bounce 1s infinite alternate;
+      }
+
+      /* Keyframes for Bouncing Animation */
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* Smooth Scaling for Button Hover */
+      .btn-hover:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-zinc-600 h-screen w-full text-white">
+      <!-- Navigation bar -->
+      <!-- <nav class="flex items-center justify-between h-16 bg-zinc-900 p-6">
+            
+            <div class="flex items-center">
+                <img class="h-8 w-8" src="images/download (1).jpeg" alt="bgi">
+                <span class="ml-4 text-lg font-medium">Bansal Group</span>
+            </div>
+            <div class="flex gap-10 items-center">
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
+                    Log in
+                </button>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
+                    Sign up
+                </button>
+            </div>
+        </nav> -->
+
+      <nav class="navbar">
+        <div class="navbar-container">
+          <!-- Branding -->
+          <div class="flex items-center">
+            <img class="h-8 w-8" src="images/download (1).jpeg" alt="bgi" />
+            <span class="ml-4 text-lg font-medium">Bansal Group</span>
+          </div>
+
+          <!-- Navbar Menu -->
+          <ul class="navbar-menu">
+            <!-- Student Section -->
+            <li class="dropdown">
+              <a href="#" class="nav-link">Student Section</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Others/assignments.html">Assignments</a></li>
+                <li><a href="/Others/admissions.html">Admissions</a></li>
+                <li><a href="/Others/scholarships.html">Scholarships</a></li>
+                <li><a href="/Others/games.html">Games</a></li>
+                <li><a href="/Others/accounts.html">Accounts</a></li>
+                <li><a href="/Others/nss.html">NSS</a></li>
+                <li><a href="/Others/nss.html">NCC</a></li>
+              </ul>
+            </li>
+
+            <!-- College Section -->
+            <li class="dropdown">
+              <a href="#" class="nav-link">College Section</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Others/bist.html">BIST</a></li>
+                <li><a href="/Others/bist.html">Pharmacy</a></li>
+                <li><a href="/Others/bist.html">Nursing</a></li>
+                <li><a href="/Others/bist.html">BIRT</a></li>
+                <li><a href="/Others/bist.html">BIRTS</a></li>
+                <li><a href="/Others/bist.html">BCP</a></li>
+                <li><a href="/Others/bist.html">Sushila Devi Indore Campus</a></li>
+                <li>
+                  <a href="/Others/bist.html">Placements & Training Department</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Department Section -->
+            <li class="dropdown">
+              <a href="#" class="nav-link">Department Section</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Others/computer.html">Computer Science</a></li>
+                <li>
+                  <a href="/Others/information.html">Information Technology</a>
+                </li>
+                <li>
+                  <a href="/Others/electronics.html">Electronics & Communication</a>
+                </li>
+                <li><a href="/Others/electrical.html">Electrical Engineering</a></li>
+                <li><a href="/Others/mechanical.html">Mechanical Engineering</a></li>
+                <li><a href="/Others/computer.html">Computer Science - ML</a></li>
+                <li><a href="/Others/computer.html">Computer Science - AI</a></li>
+                <li><a href="/Others/computer.html">Computer Science - DS</a></li>
+              </ul>
+            </li>
+
+            <!-- Faculty Section -->
+            <li class="dropdown">
+              <a href="#" class="nav-link">Faculty Section</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Others/subjects.html">Subjects</a></li>
+                <li><a href="/Others/subjects.html">Topics</a></li>
+                <li><a href="/Others/weekly.html">Weekly Diary</a></li>
+                <li><a href="/Others/weekly.html">Research & Development</a></li>
+              </ul>
+            </li>
+
+            <!-- Admin Section -->
+            <li class="dropdown">
+              <a href="#" class="nav-link">Admin Section</a>
+              <ul class="dropdown-menu">
+                <li><a href="/Others/responsibility.html">Executive Leadership</a></li>
+                <li>
+                  <a href="/Others/responsibility.html">Corporate Responsibility</a>
+                </li>
+                <li><a href="/Others/responsibility.html">Newsroom</a></li>
+                <li><a href="/Others/responsibility.html">Investor Relations</a></li>
+              </ul>
+            </li>
+
+            <!-- Company Section -->
+            <li class="dropdown">
+              <a href="#" class="nav-link">About us</a>
+              <ul class="dropdown-menu">
+                <li><a href="./Others/technology.html">Our Technology</a></li>
+                <li><a href="./Others/technology.html">Partners</a></li>
+                <li><a href="./Others/technology.html">Success Stories</a></li>
+                <li><a href="./Others/career.html">Careers</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Buttons -->
+          <div class="button-container flex gap-4">
+            <button onclick="window.location.href='./Others/login.html'">Log In</button>
+            <button onclick="window.location.href='./Others/signup.html'">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <h1
+        class="flex justify-center items-center text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-green-400 to-purple-500 animated-gradient text-3xl font-bold text-gray-800"
+      >
+        Welcome to
+      </h1>
+      <br />
+      <h2
+        class="text-4xl flex justify-center items-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 to-pink-500 sliding-gradient"
+      >
+        Bansal Group of Institutions
+      </h2>
+
+      <div
+        class="bg-zinc-600 h-screen w-full text-white flex items-center justify-center"
+      >
+        <!-- Image Carousel -->
+        <div
+          class="carousel-container relative overflow-hidden w-4/5 h-3/5 bg-gray-800 rounded-lg"
+        >
+          <div
+            class="carousel-images flex transition-transform duration-500 ease-linear"
+          >
+            <img
+              src="images/college group photo.jpg"
+              alt="Image 1"
+              class="w-full object-cover"
+            />
+            <img
+              src="images/clg.jpeg"
+              alt="Image 2"
+              class="w-full object-cover"
+            />
+            <img
+              src="images/clg2.jpeg"
+              alt="Image 3"
+              class="w-full object-cover"
+            />
+            <img
+              src="images/clg3.jpeg"
+              alt="Image 4"
+              class="w-full object-cover"
+            />
+            <img
+              src="images/clg4.jpeg"
+              alt="Image 5"
+              class="w-full object-cover"
+            />
+            <img
+              src="images/clg9.jpeg"
+              alt="Image 6"
+              class="w-full object-cover"
+            />
+          </div>
+          <!-- Dots for navigation -->
+          <div
+            class="dots absolute bottom-5 w-full flex justify-center space-x-2"
+          >
+            <div class="dot w-4 h-4 bg-gray-500 rounded-full"></div>
+            <div class="dot w-4 h-4 bg-gray-500 rounded-full"></div>
+            <div class="dot w-4 h-4 bg-gray-500 rounded-full"></div>
+            <div class="dot w-4 h-4 bg-gray-500 rounded-full"></div>
+            <div class="dot w-4 h-4 bg-gray-500 rounded-full"></div>
+            <div class="dot w-4 h-4 bg-gray-500 rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-screen flex items-center bg-gray-900 text-white">
+        <!-- Left Side -->
+        <div
+          class="w-1/2 h-full flex flex-col justify-center items-start px-10 space-y-6"
+        >
+          <h1 class="text-4xl font-bold">Explore Stunning Knowledge</h1>
+          <p class="text-lg text-gray-400">
+            Watch your favorite content seamlessly on BGI platform.
+          </p>
+          <button
+            class="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-600 transition"
+          >
+            Explore More
+          </button>
+        </div>
+
+        <!-- Right Side -->
+        <div
+          class="w-1/2 h-full flex flex-col items-center justify-center px-5 space-y-4"
+        >
+          <!-- YouTube Video Embed -->
+          <video
+            class="w-full h-3/4 rounded-lg"
+            autoplay
+            muted
+            loop
+            playsinline
+            src="images/videoplayback.mp4"
+          ></video>
+          <!-- Description Below the Video -->
+          <p class="text-center text-gray-300 text-md">
+            This video highlights the bgi group . Watch and immerse yourself in
+            the experience.
+          </p>
+        </div>
+      </div>
+      <h2
+        class="text-4xl flex justify-center items-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-purple-500 to-blue-500 sliding-gradient"
+      >
+        BGI ALUMNI...
+      </h2>
+
+      <div
+        class="h-screen flex items-center justify-center bg-gray-900 text-white"
+      >
+        <div class="overflow-hidden w-full h-64 relative">
+          <div class="image-container absolute top-0 left-0">
+            <!-- Images -->
+            <img
+              src="images/1.jpeg"
+              alt="Image 1"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/2.jpeg"
+              alt="Image 2"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/3.jpeg"
+              alt="Image 3"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/4.jpeg"
+              alt="Image 4"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/6.jpeg"
+              alt="Image 5"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/8.jpeg"
+              alt="Image 6"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <!-- Duplicate images for seamless scrolling -->
+            <img
+              src="images/1.jpeg"
+              alt="Image 1"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/9.jpeg"
+              alt="Image 1"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/4.jpeg"
+              alt="Image 1"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/2.jpeg"
+              alt="Image 2"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/3.jpeg"
+              alt="Image 3"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/4.jpeg"
+              alt="Image 4"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/6.jpeg"
+              alt="Image 5"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+            <img
+              src="images/8.jpeg"
+              alt="Image 6"
+              class="scrolling-image w-40 h-40 object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 text-gray-800">
+        <!-- Heading -->
+        <div class="text-center my-10">
+          <h1 class="heading text-4xl font-extrabold text-gray-800">
+            Our Amazing Services
+          </h1>
+          <p class="mt-4 text-lg text-gray-600">
+            Explore our services that bring value to you
+          </p>
+        </div>
+
+        <!-- Card Container -->
+        <div class="flex justify-center space-x-8 px-4">
+          <!-- Card 1 -->
+          <div
+            class="card bg-white rounded-lg shadow-lg w-80 p-6 transition-transform"
+          >
+            <img
+              src="images/clg4.jpeg"
+              alt="Service 1"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h2 class="text-2xl font-semibold mb-2">Academic Excellence</h2>
+            <p class="text-gray-600 mb-4">
+              ollege's commitment to high academic standards across various
+              disciplines, ensuring students are well-prepared for their future
+              careers.
+            </p>
+            <button
+              class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition"
+            >
+              Learn More
+            </button>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="card bg-white rounded-lg shadow-lg w-80 p-6 transition-transform"
+          >
+            <img
+              src="images/clg3.jpeg"
+              alt="Service 2"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h2 class="text-2xl font-semibold mb-2">Vibrant Campus Life</h2>
+            <p class="text-gray-600 mb-4">
+              Emphasizes the active and engaging campus life that students
+              experience, including clubs, sports, and recreational activities.
+            </p>
+            <button
+              class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition"
+            >
+              Learn More
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="card bg-white rounded-lg shadow-lg w-80 p-6 transition-transform"
+          >
+            <img
+              src="images/clg2.jpeg"
+              alt="Service 3"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h2 class="text-2xl font-semibold mb-2">
+              Student Support Services
+            </h2>
+            <p class="text-gray-600 mb-4">
+              the support services available to students, during their academic
+              journey.
+            </p>
+            <button
+              class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--nss ncc-->
+      <div class="bg-gray-100 text-gray-800">
+        <!-- Heading -->
+        <div class="text-center my-10">
+          <h1 class="heading text-4xl font-extrabold text-gray-800">
+            Extra-curricular Activities
+          </h1>
+          <p class="mt-4 text-lg text-gray-600">
+            Explore our services that bring value to you
+          </p>
+        </div>
+
+        <!-- Card Container -->
+        <div class="flex justify-center space-x-8 px-4">
+          <!-- Card 1 -->
+          <div
+            class="card bg-white rounded-lg shadow-lg w-80 p-6 transition-transform"
+          >
+            <img
+              src="images/ncc.png"
+              alt="Service 1"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h2 class="text-2xl font-semibold mb-2">
+              Leadership Through Discipline - NCC
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Join the prestigious National Cadet Corps (NCC) program at
+              [College Name] to develop discipline, leadership, and a sense of
+              national pride.
+            </p>
+            <button
+              class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition"
+            >
+              Explore NCC Opportunities
+            </button>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="card bg-white rounded-lg shadow-lg w-80 p-6 transition-transform"
+          >
+            <img
+              src="images/nss.png"
+              alt="Service 2"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h2 class="text-2xl font-semibold mb-2">
+              Serving Communities - NSS
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Be a change-maker with the National Service Scheme (NSS) at
+              [College Name]. Engage in impactful community service activities,
+              including literacy drives,.
+            </p>
+            <button
+              class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition"
+            >
+              Join NSS Today
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="card bg-white rounded-lg shadow-lg w-80 p-6 transition-transform"
+          >
+            <img
+              src="images/game.jpeg"
+              alt="Service 3"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h2 class="text-2xl font-semibold mb-2">
+              Fuel Your Passion for Sports
+            </h2>
+            <p class="text-gray-600 mb-4">
+              At BGI, we believe in nurturing talent both on and ld-class
+              competitive tournaments. Whether you play cricket, facilities for
+              sports like cricket, football, basketball, and athletics,
+            </p>
+            <button
+              class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600 transition"
+            >
+              Discover Our Sports Programs
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 text-gray-800">
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white py-10">
+          <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              <!-- Student Section -->
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Student Section</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="footer-link">Assignments</a></li>
+                  <li><a href="#" class="footer-link">Admissions</a></li>
+                  <li><a href="#" class="footer-link">Scholarships</a></li>
+                  <li><a href="#" class="footer-link">Games</a></li>
+                  <li><a href="#" class="footer-link">Accounts</a></li>
+                  <li><a href="#" class="footer-link">NSS</a></li>
+                  <li><a href="#" class="footer-link">NCC</a></li>
+                </ul>
+              </div>
+
+              <!-- Faculty Section -->
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Faculty Section</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="footer-link">Subjects</a></li>
+                  <li><a href="#" class="footer-link">Topics</a></li>
+                  <li><a href="#" class="footer-link">Weekly Diary</a></li>
+                  <li>
+                    <a href="#" class="footer-link">Research & Development</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="footer-link">Blog</a></li>
+                  <li><a href="#" class="footer-link">Events</a></li>
+                  <li><a href="#" class="footer-link">Podcasts</a></li>
+                  <li><a href="#" class="footer-link">Store</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Services</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="footer-link">Implementation</a></li>
+                  <li><a href="#" class="footer-link">Training</a></li>
+                  <li><a href="#" class="footer-link">Client Services</a></li>
+                  <li><a href="#" class="footer-link">Contact Sales</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Support</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="footer-link">Cybersecurity</a></li>
+                  <li>
+                    <a href="#" class="footer-link">Privacy Resource Center</a>
+                  </li>
+                  <li><a href="#" class="footer-link">Knowledge Base</a></li>
+                  <li>
+                    <a href="#" class="footer-link">System Requirements</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Mobile Apps</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="footer-link">Apple App Store</a></li>
+                  <li><a href="#" class="footer-link">Google Play Store</a></li>
+                </ul>
+              </div>
+
+              <!-- Admin Section -->
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Admin Section</h3>
+                <ul class="space-y-2">
+                  <li>
+                    <a href="#" class="footer-link">Executive Leadership</a>
+                  </li>
+                  <li>
+                    <a href="#" class="footer-link">Corporate Responsibility</a>
+                  </li>
+                  <li><a href="#" class="footer-link">Newsroom</a></li>
+                  <li>
+                    <a href="#" class="footer-link">Investor Relations</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Company Section -->
+              <div>
+                <h3 class="text-xl font-semibold mb-4">Company</h3>
+                <ul class="space-y-2">
+                  <li><a href="#" class="footer-link">Our Technology</a></li>
+                  <li><a href="#" class="footer-link">Partners</a></li>
+                  <li><a href="#" class="footer-link">Success Stories</a></li>
+                  <li><a href="#" class="footer-link">Careers</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="mt-10 text-center">
+              <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+              <div class="flex justify-center space-x-6">
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  class="social-icon text-gray-400 text-2xl hover:text-pink-500"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  class="social-icon text-gray-400 text-2xl hover:text-blue-600"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  class="social-icon text-gray-400 text-2xl hover:text-red-600"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  class="social-icon text-gray-400 text-2xl hover:text-blue-700"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  class="social-icon text-gray-400 text-2xl hover:text-blue-400"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-10 text-center border-t border-gray-700 pt-5">
+              <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+
+        <!-- FontAwesome for Social Media Icons -->
+        <script
+          src="https://kit.fontawesome.com/a076d05399.js"
+          crossorigin="anonymous"
+        ></script>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="Dashboard.js"></script>
+  </body>
+</html>

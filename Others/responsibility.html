@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Responsibility</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Gradient Heading Animation */
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-heading {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientText 4s ease infinite;
+            text-align: center;
+        }
+
+        /* Card Hover Effects */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-center py-10">
+        <h1 class="gradient-heading">Corporate Responsibility</h1>
+        <p class="mt-4 text-xl">Building a sustainable future through ethical practices and social impact.</p>
+    </header>
+
+    <!-- About Corporate Responsibility -->
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Our Commitment</h2>
+        <p class="text-lg leading-7 text-gray-700 text-center">
+            At BGI, corporate responsibility is at the heart of everything we do. We are dedicated to making a positive
+            impact on the environment, empowering communities, and promoting ethical business practices. By fostering
+            sustainability and innovation, we aim to build a better future for generations to come.
+        </p>
+    </section>
+
+    <!-- Core Focus Areas -->
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Core Focus Areas</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/stu.jpeg" alt="Environment" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Environmental Sustainability</h3>
+                    <p>Reducing our carbon footprint through innovative energy solutions and waste management.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/place.png" alt="Community Development" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Community Development</h3>
+                    <p>Empowering communities through education, healthcare, and skill development programs.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/mechanical.jpeg" alt="Ethical Practices" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Ethical Practices</h3>
+                    <p>Maintaining integrity and transparency in all business operations and stakeholder engagements.</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/tech.png" alt="Innovation" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Sustainable Innovation</h3>
+                    <p>Driving innovation to create sustainable products and solutions for future challenges.</p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/electrical.jpeg" alt="Diversity and Inclusion" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Diversity and Inclusion</h3>
+                    <p>Fostering an inclusive workplace that celebrates diversity and ensures equal opportunities.</p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/electronix.jpeg" alt="Partnerships" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Global Partnerships</h3>
+                    <p>Collaborating with organizations worldwide to promote sustainable development goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">About Us</a></li>
+                        <li><a href="#" class="footer-link">Our Vision</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Bansal Group of Institutions</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bansal Group of Institutions</h1>
+        <form id="signup-form">
+            <label for="enrollment">Enrollment Number:</label>
+            <input type="text" id="enrollment" required>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required>
+
+            <label for="college">College:</label>
+            <select id="college" required>
+                <option value="BIST">BIST</option>
+                <option value="BIRTS">BIRTS</option>
+                <option value="BIRT">BIRT</option>
+                <option value="BCE">BCE</option>
+                <option value="SUSHILA DEVI">SUSHILA DEVI</option>
+                <option value="NURSHING">NURSHING</option>
+            </select>
+
+            <label for="user-type">User Type:</label>
+            <select id="user-type" required>
+                <option value="student">Student</option>
+                <option value="faculty">Faculty</option>
+                <option value="admin">Admin</option>
+            </select>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Redirecting to login page...</p>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

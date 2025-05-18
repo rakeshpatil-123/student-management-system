@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Font Animation for Headings */
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px #93c5fd, 0 0 10px #3b82f6; }
+            50% { text-shadow: 0 0 20px #3b82f6, 0 0 30px #60a5fa; }
+            100% { text-shadow: 0 0 5px #93c5fd, 0 0 10px #3b82f6; }
+        }
+
+        .glow-text {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #3b82f6;
+            text-align: center;
+            animation: textGlow 3s ease-in-out infinite;
+        }
+
+        /* Delayed Fade-in Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Card Hover Effects */
+        .info-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Description Styling */
+        .about-text {
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+            color: #374151;
+        }
+
+        /* Gradient Divider */
+        .divider {
+            height: 3px;
+            background: linear-gradient(to right, #3b82f6, #60a5fa, #93c5fd);
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-20">
+        <h1 class="glow-text">Welcome to BGI - A Legacy of Excellence</h1>
+        <p class="text-center text-xl mt-6 max-w-3xl mx-auto">
+            At Bansal Group of Institutions (BGI), we strive to deliver world-class education and foster innovation for a better tomorrow.
+        </p>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-semibold text-center fade-in">Who We Are</h2>
+        <div class="divider"></div>
+        <p class="about-text fade-in-delay max-w-4xl mx-auto">
+            Bansal Group of Institutions (BGI), established in 2000 in Bhopal, is a leading academic institution offering a wide range of undergraduate and postgraduate programs in engineering, management, and technology. With a mission to empower young minds through quality education and a vision to be recognized globally, BGI has consistently delivered on its promise to transform students into future leaders.
+        </p>
+        <p class="about-text fade-in-delay mt-6 max-w-4xl mx-auto">
+            Our state-of-the-art campus provides a nurturing environment that encourages creativity, critical thinking, and collaboration. Equipped with advanced laboratories, well-stocked libraries, and expert faculty, BGI is committed to academic excellence and holistic development. From cultural events to technical fests, every activity is designed to enhance student life and prepare them for global challenges.
+        </p>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-semibold text-center fade-in">Why Choose BGI?</h2>
+        <div class="divider"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+            <!-- Card 1 -->
+            <div class="info-card bg-white rounded-lg shadow-md overflow-hidden p-6 fade-in">
+                <h3 class="text-xl font-bold text-blue-600 mb-4">State-of-the-Art Facilities</h3>
+                <p class="about-text">
+                    Our modern classrooms, advanced labs, and collaborative spaces create the perfect environment for academic excellence.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="info-card bg-white rounded-lg shadow-md overflow-hidden p-6 fade-in">
+                <h3 class="text-xl font-bold text-blue-600 mb-4">World-Class Faculty</h3>
+                <p class="about-text">
+                    Learn from experienced academicians and industry professionals who guide and mentor students to excel.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="info-card bg-white rounded-lg shadow-md overflow-hidden p-6 fade-in">
+                <h3 class="text-xl font-bold text-blue-600 mb-4">Global Exposure</h3>
+                <p class="about-text">
+                    Opportunities for internships, global exchange programs, and industry partnerships ensure our students are globally ready.
+                </p>
+            </div>
+            <!-- Card 4 -->
+            <div class="info-card bg-white rounded-lg shadow-md overflow-hidden p-6 fade-in">
+                <h3 class="text-xl font-bold text-blue-600 mb-4">Holistic Development</h3>
+                <p class="about-text">
+                    From cultural events to leadership workshops, we focus on the overall development of students.
+                </p>
+            </div>
+            <!-- Card 5 -->
+            <div class="info-card bg-white rounded-lg shadow-md overflow-hidden p-6 fade-in">
+                <h3 class="text-xl font-bold text-blue-600 mb-4">Strong Alumni Network</h3>
+                <p class="about-text">
+                    Our alumni are our pride, working in leading organizations across the globe and supporting current students.
+                </p>
+            </div>
+            <!-- Card 6 -->
+            <div class="info-card bg-white rounded-lg shadow-md overflow-hidden p-6 fade-in">
+                <h3 class="text-xl font-bold text-blue-600 mb-4">Excellent Placements</h3>
+                <p class="about-text">
+                    BGI has a stellar placement record, with top companies hiring our graduates year after year.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Admissions</a></li>
+                        <li><a href="#" class="footer-link">Departments</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

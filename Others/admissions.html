@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Card Hover Effects */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(to right, #ff7eb3, #ff758c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-pink-500 to-red-500 text-white text-center py-10">
+        <h1 class="text-5xl font-extrabold text-gradient">Admissions</h1>
+        <p class="mt-4 text-xl">Join a community of excellence and explore the opportunities awaiting you.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto py-10 px-4">
+        <!-- Grid of Cards -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card: Undergraduate Programs -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/ug.jpeg" alt="Undergraduate Programs" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Undergraduate Programs</h2>
+                    <p>Explore a wide range of undergraduate courses designed to build a strong foundation for your future.</p>
+                    <a href="#" class="mt-4 inline-block bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Card: Postgraduate Programs -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/pg.jpeg" alt="Postgraduate Programs" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Postgraduate Programs</h2>
+                    <p>Advance your career with specialized master's and doctoral programs across various disciplines.</p>
+                    <a href="#" class="mt-4 inline-block bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Card: Scholarships -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/scolar.png" alt="Scholarships" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Scholarships</h2>
+                    <p>Learn about merit-based and need-based scholarships that can make education accessible for you.</p>
+                    <a href="#" class="mt-4 inline-block bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Explore Scholarships</a>
+                </div>
+            </div>
+
+            <!-- Card: International Students -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/stu.jpeg" alt="International Students" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">International Students</h2>
+                    <p>Discover resources, guidance, and programs designed for students from around the globe.</p>
+                    <a href="#" class="mt-4 inline-block bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Card: Admission Process -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/add.jpeg" alt="Admission Process" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Admission Process</h2>
+                    <p>Step-by-step guidance to ensure a smooth application process, from filling forms to enrollment.</p>
+                    <a href="#" class="mt-4 inline-block bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Get Started</a>
+                </div>
+            </div>
+
+            <!-- Card: Placements -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/place.png" alt="Placements" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Placements</h2>
+                    <p>Our career services and placement support help you achieve your professional aspirations.</p>
+                    <a href="#" class="mt-4 inline-block bg-pink-500 text-white py-2 px-4 rounded-full hover:bg-pink-600">Explore Opportunities</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Motivational Section -->
+    <section class="bg-red-100 py-10 text-center">
+        <h2 class="text-3xl font-semibold mb-4">"The future belongs to those who believe in the beauty of their dreams."</h2>
+        <p class="text-lg text-gray-700">Take the first step toward your bright future!</p>
+    </section>
+
+    <div class="bg-gray-100 text-gray-800">
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white py-10">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Student Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Student Section</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Assignments</a></li>
+                            <li><a href="#" class="footer-link">Admissions</a></li>
+                            <li><a href="#" class="footer-link">Scholarships</a></li>
+                            <li><a href="#" class="footer-link">Games</a></li>
+                            <li><a href="#" class="footer-link">Accounts</a></li>
+                            <li><a href="#" class="footer-link">NSS</a></li>
+                            <li><a href="#" class="footer-link">NCC</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Faculty Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Faculty Section</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Subjects</a></li>
+                            <li><a href="#" class="footer-link">Topics</a></li>
+                            <li><a href="#" class="footer-link">Weekly Diary</a></li>
+                            <li><a href="#" class="footer-link">Research & Development</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Blog</a></li>
+                            <li><a href="#" class="footer-link">Events</a></li>
+                            <li><a href="#" class="footer-link">Podcasts</a></li>
+                            <li><a href="#" class="footer-link">Store</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Implementation</a></li>
+                            <li><a href="#" class="footer-link">Training</a></li>
+                            <li><a href="#" class="footer-link">Client Services</a></li>
+                            <li><a href="#" class="footer-link">Contact Sales</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Support</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Cybersecurity</a></li>
+                            <li><a href="#" class="footer-link">Privacy Resource Center</a></li>
+                            <li><a href="#" class="footer-link">Knowledge Base</a></li>
+                            <li><a href="#" class="footer-link">System Requirements</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Mobile Apps</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Apple App Store</a></li>
+                            <li><a href="#" class="footer-link">Google Play Store</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Admin Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Admin Section</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Executive Leadership</a></li>
+                            <li><a href="#" class="footer-link">Corporate Responsibility</a></li>
+                            <li><a href="#" class="footer-link">Newsroom</a></li>
+                            <li><a href="#" class="footer-link">Investor Relations</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Company Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Company</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Our Technology</a></li>
+                            <li><a href="#" class="footer-link">Partners</a></li>
+                            <li><a href="#" class="footer-link">Success Stories</a></li>
+                            <li><a href="#" class="footer-link">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Social Media Section -->
+                <div class="mt-10 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-pink-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-blue-600">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-red-600">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-blue-700">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-blue-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Footer Bottom -->
+                <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                    <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- FontAwesome for Social Media Icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </div>
+
+
+</body>
+</html>

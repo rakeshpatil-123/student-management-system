@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gradient-heading {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff6f61);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientText 5s ease infinite;
+            text-align: center;
+        }
+
+        .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hod-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #feb47b;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-orange-500 to-red-500 text-white text-center py-10">
+        <h1 class="gradient-heading">Mechanical Engineering</h1>
+        <p class="mt-4 text-xl">Innovating the future of engineering through creativity and precision.</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="container mx-auto py-10 px-4 text-center">
+        <h2 class="text-2xl font-bold mb-6">About the Department</h2>
+        <p class="text-lg leading-7 text-gray-700">
+            The Mechanical Engineering Department is committed to providing students with a strong foundation in design, manufacturing, and thermodynamics. The department fosters innovation and prepares students for a wide range of industries, including automotive, aerospace, and energy.
+        </p>
+        <p class="text-lg leading-7 text-gray-700 mt-4">
+            Led by Prof. Dr. Rashmi Saxena, an expert in thermal systems and fluid mechanics, the department emphasizes practical learning through hands-on projects and state-of-the-art labs.
+        </p>
+        <div class="mt-10">
+            <img src="../images/mech.jpeg" alt="HOD Mechanical" class="hod-image mx-auto">
+            <h3 class="text-xl font-semibold mt-4">Dr. Rashmi Saxena</h3>
+            <p class="text-gray-600">Head of Mechanical Engineering Department</p>
+        </div>
+    </section>
+
+    <!-- Subjects Cards -->
+    <section class="container mx-auto py-10 px-4">
+        <h2 class="text-2xl font-bold text-center mb-6">Core Subjects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/mechanical.jpeg" alt="Thermodynamics" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Thermodynamics</h3>
+                    <p>Study the principles of energy, heat, and work in various systems.</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/electrical.jpeg" alt="Fluid Mechanics" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">Fluid Mechanics</h3>
+                    <p>Understand the behavior of fluids in motion and at rest.</p>
+                </div>
+            </div>
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/electronix.jpeg" alt="CAD" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">CAD (Computer-Aided Design)</h3>
+                    <p>Learn to create precise designs and models using advanced tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Admissions</a></li>
+                        <li><a href="#" class="footer-link">Departments</a></li>
+                        <li><a href="#" class="footer-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

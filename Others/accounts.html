@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Card Hover Effects */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(to right, #8e44ad, #c39bd3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-center py-10">
+        <h1 class="text-5xl font-extrabold text-gradient">Accounts</h1>
+        <p class="mt-4 text-xl">Manage all your academic and financial accounts with ease.</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto py-10 px-4">
+        <!-- Grid of Cards -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card: Fee Payment -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/place.png" alt="Fee Payment" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Fee Payment</h2>
+                    <p>Securely pay your tuition, hostel, and other fees online with just a few clicks.</p>
+                    <a href="#" class="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">Pay Now</a>
+                </div>
+            </div>
+
+            <!-- Card: Transaction History -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/account.jpeg" alt="Transaction History" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Transaction History</h2>
+                    <p>View and download your detailed transaction history for all payments made.</p>
+                    <a href="#" class="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">View History</a>
+                </div>
+            </div>
+
+            <!-- Card: Financial Aid -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/stu.jpeg" alt="Financial Aid" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Financial Aid</h2>
+                    <p>Apply for financial aid or fee waivers to support your educational expenses.</p>
+                    <a href="#" class="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Card: Account Update -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/scolar.png" alt="Account Update" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Account Update</h2>
+                    <p>Update your personal and academic details seamlessly in your account profile.</p>
+                    <a href="#" class="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">Update Details</a>
+                </div>
+            </div>
+
+            <!-- Card: Scholarship Status -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/pg.jpeg" alt="Scholarship Status" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Scholarship Status</h2>
+                    <p>Check the status of your applied scholarships and grants in one place.</p>
+                    <a href="#" class="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">Track Status</a>
+                </div>
+            </div>
+
+            <!-- Card: Refunds -->
+            <div class="card bg-white rounded-lg shadow-md overflow-hidden">
+                <img src="../images/place.png" alt="Refunds" class="w-full h-40 object-cover">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold mb-2">Refunds</h2>
+                    <p>Request and track fee refunds quickly with our easy-to-use system.</p>
+                    <a href="#" class="mt-4 inline-block bg-purple-500 text-white py-2 px-4 rounded-full hover:bg-purple-600">Request Refund</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Motivational Section -->
+    <section class="bg-purple-100 py-10 text-center">
+        <h2 class="text-3xl font-semibold mb-4">"A strong foundation starts with organized accounts."</h2>
+        <p class="text-lg text-gray-700">Stay organized and focused on your goals!</p>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="bg-gray-100 text-gray-800">
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-900 text-white py-10">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Student Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Student Section</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Assignments</a></li>
+                            <li><a href="#" class="footer-link">Admissions</a></li>
+                            <li><a href="#" class="footer-link">Scholarships</a></li>
+                            <li><a href="#" class="footer-link">Games</a></li>
+                            <li><a href="#" class="footer-link">Accounts</a></li>
+                            <li><a href="#" class="footer-link">NSS</a></li>
+                            <li><a href="#" class="footer-link">NCC</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Faculty Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Faculty Section</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Subjects</a></li>
+                            <li><a href="#" class="footer-link">Topics</a></li>
+                            <li><a href="#" class="footer-link">Weekly Diary</a></li>
+                            <li><a href="#" class="footer-link">Research & Development</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Blog</a></li>
+                            <li><a href="#" class="footer-link">Events</a></li>
+                            <li><a href="#" class="footer-link">Podcasts</a></li>
+                            <li><a href="#" class="footer-link">Store</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Services</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Implementation</a></li>
+                            <li><a href="#" class="footer-link">Training</a></li>
+                            <li><a href="#" class="footer-link">Client Services</a></li>
+                            <li><a href="#" class="footer-link">Contact Sales</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Support</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Cybersecurity</a></li>
+                            <li><a href="#" class="footer-link">Privacy Resource Center</a></li>
+                            <li><a href="#" class="footer-link">Knowledge Base</a></li>
+                            <li><a href="#" class="footer-link">System Requirements</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Mobile Apps</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Apple App Store</a></li>
+                            <li><a href="#" class="footer-link">Google Play Store</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Admin Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Admin Section</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Executive Leadership</a></li>
+                            <li><a href="#" class="footer-link">Corporate Responsibility</a></li>
+                            <li><a href="#" class="footer-link">Newsroom</a></li>
+                            <li><a href="#" class="footer-link">Investor Relations</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Company Section -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Company</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="footer-link">Our Technology</a></li>
+                            <li><a href="#" class="footer-link">Partners</a></li>
+                            <li><a href="#" class="footer-link">Success Stories</a></li>
+                            <li><a href="#" class="footer-link">Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Social Media Section -->
+                <div class="mt-10 text-center">
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-pink-500">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-blue-600">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-red-600">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-blue-700">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank" class="social-icon text-gray-400 text-2xl hover:text-blue-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Footer Bottom -->
+                <div class="mt-10 text-center border-t border-gray-700 pt-5">
+                    <p class="text-gray-500">&copy; 2024 BGI. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- FontAwesome for Social Media Icons -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </div>
+
+</body>
+</html>
